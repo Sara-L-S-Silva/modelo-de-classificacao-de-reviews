@@ -9,6 +9,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import classification_report
 from nltk.corpus import stopwords
+
 import nltk
 
 import kagglehub
@@ -115,10 +116,10 @@ show_top_features(logreg, tfidf)
 
 # Naive Bayes 
 
-nb = MultinomialNB(fit_prior=True)
+naive_bayes  = MultinomialNB(fit_prior=True)
 
-nb.fit(X_train_tfidf, y_train)
-y_pred_nb = nb.predict(X_test_tfidf)
+naive_bayes.fit(X_train_tfidf, y_train)
+y_pred_nb = naive_bayes.predict(X_test_tfidf)
 
 # Dados relevantes para a análise de eficácia do algoritmo de Naive Bayes
 
@@ -126,7 +127,7 @@ print("\n=== Naive Bayes ===")
 print(classification_report(y_test, y_pred_nb))
 
 print("\n=== Palavras mais relevantes (Naive Bayes) ===")
-show_top_features(nb, tfidf)
+show_top_features(naive_bayes, tfidf)
 
 
 
