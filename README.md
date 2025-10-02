@@ -24,7 +24,7 @@ Regressão Logística: selecionada por ser um modelo mais robusto e interpretáv
 
 3. Divisão dos dados
 
-Utilizei o train_test_split do scikit-learn para separar os dados em treino e teste, garantindo a avaliação justa dos modelos.
+Utilizei o train_test_split do scikit-learn para separar os dados em treino e teste, garantindo a avaliação justa dos modelos. Para definir o rótulo, tive que separar as notas como abaico de 3 (negativas) e acima de 4 (positivas), retirando a nota 3 como potencial comentário neutro para fins de aprendizado de máquina.
 
 4. Métricas de avaliação
 
